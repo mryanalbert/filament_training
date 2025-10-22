@@ -15,31 +15,30 @@ class EmployeesTable
     {
         return $table
             ->columns([
-                TextColumn::make('country_id')
-                    ->numeric()
+                TextColumn::make('country.name')
                     ->sortable(),
-                TextColumn::make('state_id')
-                    ->numeric()
+                TextColumn::make('state.name')
                     ->sortable(),
-                TextColumn::make('city_id')
-                    ->numeric()
+                TextColumn::make('city.name')
                     ->sortable(),
-                TextColumn::make('department_id')
-                    ->numeric()
+                TextColumn::make('department.name')
                     ->sortable(),
                 TextColumn::make('first_name')
                     ->searchable(),
                 TextColumn::make('last_name')
                     ->searchable(),
                 TextColumn::make('middle_name')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('address')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('zip_code')
                     ->searchable(),
                 TextColumn::make('date_of_birth')
                     ->date()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('date_hired')
                     ->date()
                     ->sortable(),

@@ -21,8 +21,8 @@ class StatesTable
                 TextColumn::make('name')
                     ->label('State name')
                     ->sortable()
-                    ->searchable(isIndividual: true)
-                    ->hidden(true),
+                    ->searchable(isIndividual: true),
+                // ->hidden(true),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
